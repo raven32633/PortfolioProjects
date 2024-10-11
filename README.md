@@ -1,4 +1,4 @@
-COVID Data Exploration
+**COVID Data Exploration**
 
 In this data analysis project, I used real COVID data to explore/analyze global infection rates, death rates and vaccination rates. The dataset I used spans from 1/5/2020 through 8/4/24 and it was retrieved from https://ourworldindata.org/covid-deaths 
 
