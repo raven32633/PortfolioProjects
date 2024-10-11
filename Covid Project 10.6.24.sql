@@ -1,3 +1,5 @@
+--Covid Data Exploration--
+
 SELECT *
 FROM `portfolioproject-437501.CovidDeaths.CovidDeaths2024`
 Where continent is not null
