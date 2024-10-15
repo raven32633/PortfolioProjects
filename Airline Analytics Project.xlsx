@@ -1,8 +1,8 @@
-#Airline Passenger Satisfaction Dashboard
-##Project Objective
+# Airline Passenger Satisfaction Dashboard
+## Project Objective
 An airline wants to analyze passenger satisfaction ratings across a wide range of categories (including online booking, baggage handling, seat comfort, inflight wi-fi and everything in between).
 This analysis will give the airline a better idea of what features need to be improved upon, and what types of customers are the least satisfied. 
 
-##Dataset Used 
+## Dataset Used 
 
 - <a href="https://www.kaggle.com/datasets/teejmahal20/airline-passenger-satisfaction"> Airline Passenger Satisfaction Data </a>
