@@ -5,18 +5,3 @@
 * After analyzing the data, I created a dashboard in Tableau to visualize my results: 
   https://public.tableau.com/app/profile/raven.wallace/viz/CovidDashboard_17282531188740/Dashboard1#1
 
-
-
-# Airline Passenger Satisfaction Dashboard
-## Project Objective
-An airline wants to analyze passenger satisfaction ratings across a wide range of categories (including online booking, baggage handling, seat comfort, inflight wi-fi and everything in between).
-This analysis will give the airline a better idea of what features need to be improved upon, and what types of customers are the least satisfied. 
-
-##Dataset Used 
-
--import kagglehub
-
-# Download latest version
-path = kagglehub.dataset_download("teejmahal20/airline-passenger-satisfaction")
-
-print("Path to dataset files:", path)
