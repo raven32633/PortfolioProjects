@@ -10,5 +10,5 @@ This ReadMe will provide a summary of the various data analytics Projects I've d
 
 **2. Airline Passenger Satisfaction Dashboard**
 
-*In this project, I used a mock set of airline passenger satisfaction survey data to create an excel dashboard. I analyzed the data by travel type, class, customer type, age group and gender to figure out which customers were the most/leases satisfied. The full excel file can be found in the "Airline Passenger Satisfaction Dashboard" folder. 
+*In this project, I used a mock set of airline passenger satisfaction survey data to create an excel dashboard. I analyzed the data by travel type, class, customer type, age group and gender to figure out which customers were the most/least satisfied. The full excel file can be found in the "Airline Passenger Satisfaction Dashboard" folder. 
 <img width="1349" alt="image" src="https://github.com/user-attachments/assets/693629b3-bf55-470e-a37b-779fe56565bf" />
