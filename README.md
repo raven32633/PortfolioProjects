@@ -1,4 +1,4 @@
-This ReadMe will provide a summary of the various data analytics Projects I've done. Each project will have it's own respective file. 
+This ReadMe will provide a summary of the various data analytics Projects I've done. Each project will have it's own respective folder within this portfolio projects folder. 
 
 **1. COVID Data Exploration**
 
