@@ -5,3 +5,4 @@
 * After analyzing the data, I created a dashboard in Tableau to visualize my results: 
   https://public.tableau.com/app/profile/raven.wallace/viz/CovidDashboard_17282531188740/Dashboard1#1
 
+<img width="1349" alt="image" src="https://github.com/user-attachments/assets/693629b3-bf55-470e-a37b-779fe56565bf" />
