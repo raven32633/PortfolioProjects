@@ -1,0 +1,94 @@
+--Pizza Sales Dashboard Queries
+
+select *
+from pizza_sales
+
+-- Calculating Total Revenue
+
+select sum(total_price) as Total_Revenue
+from pizza_sales
+
+--Calculating Average Order Value
+
+select sum(total_price)/count(distinct order_id) as Avg_Order_Value
+from pizza_sales
+
+--Calculating Total Quantity of Pizzas Sold
+
+select sum(quantity) as Total_Pizzas_Sold
+from pizza_sales
+
+--Calculating Total # of Orders Placed
+
+select count(distinct order_id) as Total_Orders
+from pizza_sales
+
+--Calculatinng Average # of Pizzas Per Order
+
+select cast(cast(sum(quantity) as decimal(10,2))/
+Cast(count(distinct order_id) as decimal(10,2)) as decimal(10,2)) as Avg_Pizzas_Per_Order
+from pizza_sales
+
+-- Calculating Hourly Trend for Total Pizzas Sold
+
+Select datepart(hour, order_time) as order_hour, sum(quantity) as Total_pizzas_sold
+From pizza_sales
+Group By datepart(hour, order_time)
+Order By datepart(hour, order_time)
+
+--Weekly Trend for Total Orders
+
+select datepart(iso_week, order_date) as week_number, year(order_date) as Order_year, 
+count(distinct order_id) as Total_orders
+from pizza_sales
+group by datepart(iso_week, order_date), year(order_date)
+order by datepart(iso_week, order_date), year(order_date)
+
+--Calculate % of Sales by Pizza Category
+
+Select pizza_category, Cast(sum(total_price) as decimal(10,2)) as Total_Sales, Cast(sum(total_price) * 100 / (select sum(total_price) from pizza_sales Where month(order_date) = 1) as decimal (10,2)) as Percentage_Sales
+From pizza_sales 
+Where month(order_date) = 1
+group by pizza_category
+
+--Calculating % of Sales by Pizza Size
+
+Select pizza_size, Cast(sum(total_price) as decimal(10,2)) as Total_Sales, Cast(sum(total_price) * 100 / (select sum(total_price) from pizza_sales Where datepart(quarter, order_date) = 1) as decimal (10,2)) as Percentage_Sales
+From pizza_sales 
+Where datepart(quarter, order_date) = 1
+group by pizza_size
+order by Percentage_Sales desc
+
+--Calculating Best Sellers (top 5)
+
+Select Top 5 pizza_name, sum(total_price) as Total_Revenue
+from pizza_sales
+group by pizza_name
+order by Total_Revenue desc
+
+Select Top 5 pizza_name, sum(quantity) as Total_Quantity
+from pizza_sales
+group by pizza_name
+order by Total_Quantity desc
+
+Select Top 5 pizza_name, count(distinct order_id) as Total_Orders
+from pizza_sales
+group by pizza_name
+order by Total_Orders desc
+
+--Calculating Worst Sellers (Bottom 5)
+
+Select Top 5 pizza_name, sum(total_price) as Total_Revenue
+from pizza_sales
+group by pizza_name
+order by Total_Revenue Asc
+
+Select Top 5 pizza_name, sum(quantity) as Total_Quantity
+from pizza_sales
+group by pizza_name
+order by Total_Quantity asc
+
+Select Top 5 pizza_name, count(distinct order_id) as Total_Orders
+from pizza_sales
+group by pizza_name
+order by Total_Orders asc
